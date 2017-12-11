@@ -28,6 +28,8 @@
     "devDependencies": {
         "better-npm-run": "0.1.0",
         "babel-eslint": "7.2.3",
+        "babel-preset-env": "1.6.1",
+        "babel-preset-react": "6.24.1",
         "eslint": "4.6.1",
         "eslint-plugin-filenames": "1.2.0",
         "eslint-plugin-import": "2.7.0",

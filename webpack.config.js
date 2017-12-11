@@ -1,8 +1,10 @@
+var path = require("path");
+
 module.exports = {
   entry: "./main.js",
   output: {
     filename: "mention.js",
-    path: __dirname + "/build"
+    path: path.resolve(__dirname,"build")
   },
   module: {
     rules: [
@@ -11,20 +13,19 @@ module.exports = {
         include: [
           path.resolve(__dirname, "app")
         ],
-        loader: "babel"
+        loader: "babel-loader"
       },
       {
         test: /\.scss$/,
         include: [
           path.resolve(__dirname, "app")
         ],
-        loader: "sass|style"
+        loader: "sass-loader|style-loader"
       },
       {
         test: /\.(png|jpg|jpeg|gif)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-            limit: env.ASSET_LIMIT,
             name: 'img/[name]_[sha512:hash:base64:7].[ext]'
         }
 }

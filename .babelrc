@@ -2,6 +2,9 @@
     "presets": [
         // Latest stable ECMAScript features
         "babel-preset-env",
-        "babel-preset-react"
+        "babel-preset-react",
+    ],
+    "plugins": [
+        "transform-object-rest-spread"
     ]
 }

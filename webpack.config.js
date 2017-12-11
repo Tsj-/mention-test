@@ -1,7 +1,7 @@
 var path = require("path");
 
 module.exports = {
-  entry: "./main.js",
+  entry: "./app/main.js",
   output: {
     filename: "mention.js",
     path: path.resolve(__dirname,"build")

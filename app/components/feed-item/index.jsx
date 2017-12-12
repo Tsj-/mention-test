@@ -10,6 +10,16 @@ export class FeedItem extends React.Component {
   render() {
     return (
       <li data-component="feed-item">
+        <div className="aside">
+        </div>
+        <div className="content">
+          <div className="content-head">
+          </div>
+          <div className="content-name">
+          </div>
+          <div className="content-message">
+          </div>
+        </div>
       </li>
     );
   }

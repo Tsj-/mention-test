@@ -4,7 +4,13 @@ module.exports = {
   entry: "./app/main.js",
   output: {
     filename: "mention.js",
-    path: path.resolve(__dirname,"build")
+    path: path.resolve(__dirname, "build")
+  },
+  resolve: {
+    alias: {
+      react: path.resolve(__dirname, './node_modules/react'),
+      React: path.resolve(__dirname, './node_modules/react')
+    }
   },
   module: {
     rules: [
@@ -17,18 +23,21 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: [
-          path.resolve(__dirname, "app")
-        ],
-        loader: "sass-loader|style-loader"
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader"
+        }]
       },
       {
         test: /\.(png|jpg|jpeg|gif)(\?.*)?$/,
         loader: 'url-loader',
         options: {
-            name: 'img/[name]_[sha512:hash:base64:7].[ext]'
+          name: 'img/[name]_[sha512:hash:base64:7].[ext]'
         }
-}
+      }
     ]
   }
 }

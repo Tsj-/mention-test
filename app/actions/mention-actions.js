@@ -21,7 +21,7 @@ function fetchMentions(user){
     return dispatch => {
         dispatch(requestMentions())
         return get(`https://api.mention.net/api/accounts/${user.account_id}/alerts/${user.alert_id}/mentions`)
-          .then(json => dispatch(receiveMentions(subreddit, json)))
+          .then(json => dispatch(receiveMentions(json)))
       }
 }
 
@@ -42,7 +42,7 @@ export function fetchMentionsIfNeeded() {
       return dispatch(fetchMentions(state.user))
     } else {
       // Let the calling code know there's nothing to wait for.
-      return Promise.resolve()
+      return dispatch(receiveMentions(state.mentions))
     }
   }
 }

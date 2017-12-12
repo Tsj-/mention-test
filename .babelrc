@@ -5,6 +5,10 @@
         "babel-preset-react",
     ],
     "plugins": [
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        ["babel-plugin-transform-react-jsx",{ "useBuiltIns": true }],
+        "babel-plugin-syntax-dynamic-import",
+        "babel-plugin-transform-react-jsx-source",
+        "babel-plugin-transform-react-jsx-self"
     ]
 }

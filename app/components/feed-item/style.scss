@@ -1,3 +1,10 @@
+@import "../../styles/colors.scss";
+
+// locale variables
+$author-img-size: 60px;
+$dot-size: 12px;
+$twitter-img-size: 20px;
+
 li[data-component="feed-item"]{
     display: flex;
     height: 150px;
@@ -10,7 +17,41 @@ li[data-component="feed-item"]{
         width: 75px;
         display: flex;
         flex-direction: column;
-    } 
+        align-items: center;
+        justify-content: space-evenly;
+
+        .img-handler{
+            position: relative;
+            img {
+                border-radius: 50%;
+                width: $author-img-size;
+                height: $author-img-size;
+            }
+            img.twitter {
+                position: absolute;
+                height: $twitter-img-size;
+                width: $twitter-img-size;
+                border: 3px white solid;
+                bottom: -5px;
+                right: -5px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        div.dot{
+            width: $dot-size;
+            height: $dot-size;
+            border-radius: 50%;
+            background-color: $light-grey;
+
+            &.new{
+                background-color: $light-blue;
+            }
+        }
+    }
+
     .content{
         flex:1;
         display: flex;

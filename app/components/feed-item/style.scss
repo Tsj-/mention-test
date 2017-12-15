@@ -35,6 +35,8 @@ li[data-component="feed-item"]{
                 right: -5px;
                 &:hover{
                     cursor: pointer;
+                    height: calc( #{$twitter-img-size} + 2px);
+                    width: calc( #{$twitter-img-size} + 2px);
                 }
             }
         }

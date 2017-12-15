@@ -1,0 +1,7 @@
+// Css of the common layout of the application
+
+div[data-component="layout"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

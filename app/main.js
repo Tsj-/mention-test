@@ -31,3 +31,5 @@ render(
     </Provider>,
     document.getElementById('container')
 );
+
+import "./styles/common.scss";

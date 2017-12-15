@@ -7,9 +7,8 @@ $twitter-img-size: 20px;
 
 li[data-component="feed-item"]{
     display: flex;
-    height: 150px;
+    height: 130px;
     width: 450px;
-    border: solid 1px;
     padding:10px;
     position: relative;
     .aside{
@@ -40,12 +39,8 @@ li[data-component="feed-item"]{
             }
         }
 
-        div.dot{
-            width: $dot-size;
-            height: $dot-size;
-            border-radius: 50%;
+        .dot{
             background-color: $light-grey;
-
             &.new{
                 background-color: $light-blue;
             }
@@ -56,5 +51,48 @@ li[data-component="feed-item"]{
         flex:1;
         display: flex;
         flex-direction: column;
+        padding: 15px;
+
+        .content-head{
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                color: $light-grey;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            span{
+                display: flex;
+                align-items: center;
+                color: $light-blue;
+            }
+
+            .dot{
+                background-color: $light-green;
+            }
+        }
+
+        .content-name{
+            margin: 5px 0;
+            font-size: 21px;
+        }
+        .content-message a {
+            color: $black;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .dot{
+        width: $dot-size;
+        height: $dot-size;
+        border-radius: 50%;
     }
 }
